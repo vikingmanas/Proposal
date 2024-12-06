@@ -17,15 +17,13 @@ An interactive proposal website featuring heart animations, music, and a persona
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/proposal-website.git
-Navigate to the project directory:
-cd proposal-website
-Open index.html in your browser.
-🛠️ Customization
-Change theme colors in CSS
-Personalize messages in the HTML
-Replace YouTube link for custom music
-💌 Acknowledgments
-Inspired by love and creativity. Thank you for believing in romance and making memories. 💕
+- Navigate to the project directory:
+- cd proposal-website
+- Open index.html in your browser.
 
-
-This version focuses on essential details and is perfect for quick sharing or reference.
+## 🛠️ Customization
+- Change theme colors in CSS
+- Personalize messages in the HTML
+- Replace YouTube link for custom music
+## 💌 Acknowledgments
+- Inspired by love and creativity. Thank you for believing in romance and making memories. 💕
