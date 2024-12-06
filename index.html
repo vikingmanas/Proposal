@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            overflow: hidden;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 20vh auto 0;
+            animation: heart-expand 3s ease-out forwards;
+        }
+
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff4d94;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 15% 100%, 0% 35%);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff4d94;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50%;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50%;
+            top: 0;
+        }
+
+        .text {
+            text-align: center;
+            color: #ff1a75;
+            font-size: 2em;
+            margin-top: 20px;
+            opacity: 0;
+            animation: text-appear 3s 3s ease-out forwards;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            opacity: 0;
+            animation: btn-appear 3s 4s ease-out forwards;
+        }
+
+        .btn:hover {
+            background-color: #ff1a75;
+        }
+
+        @keyframes heart-expand {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes text-appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes btn-appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Falling Hearts */
+        .falling-heart {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #ff99cc;
+            transform: rotate(45deg);
+            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 15% 100%, 0% 35%);
+            animation: fall 5s linear infinite;
+        }
+
+        .falling-heart::before,
+        .falling-heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff99cc;
+            border-radius: 50%;
+        }
+
+        .falling-heart::before {
+            top: -50%;
+            left: 0;
+        }
+
+        .falling-heart::after {
+            left: 50%;
+            top: 0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateX(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-50px) translateY(100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        iframe {
+            display: none; /* Hidden initially */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 200px;
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+    <div class="text">
+        <p>You make my heart complete ❤️</p>
+        <p>Will you be my forever?</p>
+        <button class="btn" onclick="playMusic()">Yes 💕</button>
+    </div>
+
+    <iframe 
+        id="music" 
+        src="https://www.youtube.com/embed/a6cJAFFQn_I?autoplay=1" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- Falling Hearts -->
+    <div class="falling-heart" style="animation-delay: 0s; left: 30%;"></div>
+    <div class="falling-heart" style="animation-delay: 1s; left: 60%;"></div>
+    <div class="falling-heart" style="animation-delay: 2s; left: 50%;"></div>
+    <div class="falling-heart" style="animation-delay: 3s; left: 80%;"></div>
+    <div class="falling-heart" style="animation-delay: 4s; left: 40%;"></div>
+
+    <script>
+        function playMusic() {
+            const iframe = document.getElementById('music');
+            iframe.style.display = 'block'; // Show the embedded player
+        }
+    </script>
+</body>
+</html>
