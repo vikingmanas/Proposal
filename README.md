@@ -26,4 +26,4 @@ An interactive proposal website featuring heart animations, music, and a persona
 - Personalize messages in the HTML
 - Replace YouTube link for custom music
 ## 💌 Acknowledgments
-- Inspired by love and creativity. Thank you for believing in romance and making memories. 💕
+- Inspired by love and creativity.💕
