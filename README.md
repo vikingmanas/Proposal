@@ -1,25 +1,23 @@
-# ❤️ My Proposal Website
+# ❤️ My Proposal Website  
 
-An interactive proposal website featuring heart animations, music, and a personalized touch.
+An interactive proposal website designed with love, featuring stunning animations, heartfelt messages, and personalized music to create a magical experience.  
 
-## 🚀 Features
-- Animated heart opening
-- Falling hearts animation
-- Interactive "Yes 💕" button
-- Background music integration
-- Responsive design
+## 🚀 Features  
+- **Animated Heart Opening**: A beautiful heart animation that symbolizes love.  
+- **Falling Hearts Animation**: ❤️ emojis cascading down the page for a romantic vibe.  
+- **Interactive "Yes 💕" Button**: Triggers music and displays a sweet message with quotes.  
+- **Background Music Integration**: Play custom music on interaction.  
+- **Responsive Design**: Perfectly tailored for all screen sizes.  
 
-## 🛠️ Technologies Used
-- HTML5, CSS3, JavaScript
-- YouTube API for music
+## 🛠️ Technologies Used  
+- **HTML5**: Structured and semantic content.  
+- **CSS3**: Styled with animations and smooth transitions.  
+- **JavaScript**: Adds interactivity and dynamic content.  
 
-## 🌟 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/proposal-website.git
-- Navigate to the project directory:
-- cd proposal-website
-- Open index.html in your browser.
+## 🌟 How to Use  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/vikingmanas/proposal-website.git  
 
 ## 🛠️ Customization
 - Change theme colors in CSS
