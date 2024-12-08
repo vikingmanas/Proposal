@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Proposal</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -77,22 +79,13 @@
             background-color: #ff1a75;
         }
 
-        .message {
-            text-align: center;
-            margin-top: 50px;
+        .quote {
+            font-family: 'Dancing Script', cursive;
             font-size: 1.5em;
-            color: #333;
-            opacity: 0;
-            animation: fade-in 2s ease-out forwards;
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            color: #b30047;
+            text-align: center;
+            margin-top: 20px;
+            animation: text-appear 3s 4s ease-out forwards;
         }
 
         @keyframes heart-expand {
@@ -130,26 +123,6 @@
                 transform: translateY(0);
             }
         }
-
-        /* Falling Hearts */
-        .falling-heart {
-            position: fixed;
-            top: -10%;
-            font-size: 24px;
-            color: #ff1a75;
-            animation: fall 5s linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateX(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(-50px) translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -159,31 +132,21 @@
     <div class="text">
         <p>You make my heart complete ❤️</p>
         <p>Will you be my forever?</p>
-        <button class="btn" onclick="playMusic()">Yes 💕</button>
+        <button class="btn" onclick="showQuote()">Yes 💕</button>
     </div>
 
-    <!-- Falling Hearts -->
-    <div class="falling-heart" style="animation-delay: 0s; left: 30%;">❤️</div>
-    <div class="falling-heart" style="animation-delay: 1s; left: 60%;">❤️</div>
-    <div class="falling-heart" style="animation-delay: 2s; left: 50%;">❤️</div>
-    <div class="falling-heart" style="animation-delay: 3s; left: 80%;">❤️</div>
-    <div class="falling-heart" style="animation-delay: 4s; left: 40%;">❤️</div>
+    <div id="quote" class="quote" style="display: none;">
+        "I love you not only for what you are but for what I am when I am with you. ❤️"
+    </div>
 
     <audio id="bg-music" src="new_320_Baari - Bilal Saeed.mp3"></audio>
 
     <script>
-        function playMusic() {
+        function showQuote() {
             const music = document.getElementById('bg-music');
             music.play();
-
-            // Show a message with quotes and white hearts
-            const message = document.createElement('div');
-            message.classList.add('message');
-            message.innerHTML = `
-                <p>"Forever is not just a word; it's a promise 💖"</p>
-                <p>"You and me, together, forever 🤍🤍🤍"</p>
-            `;
-            document.body.appendChild(message);
+            const quote = document.getElementById('quote');
+            quote.style.display = 'block';
         }
     </script>
 </body>
